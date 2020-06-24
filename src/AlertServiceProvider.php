@@ -3,6 +3,7 @@
 namespace Veldman\Alert;
 
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 
@@ -10,6 +11,10 @@ class AlertServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'alert');
+
+        Blade::include('alert::default', 'alerts');
+
         RedirectResponse::macro('error', function ($message) {
             return $this->with('status', ['type' => 'danger', 'message' => __($message)]);
         });
