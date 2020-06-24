@@ -6,7 +6,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 
-class AppServiceProvider extends ServiceProvider
+class AlertServiceProvider extends ServiceProvider
 {
     public function boot()
     {
