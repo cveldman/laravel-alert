@@ -1,0 +1,23 @@
+{
+    "name": "veldman/laravel-alert",
+    "description": "Easy alerts for Laravel",
+    "authors": [
+        {
+            "name": "Corné Veldman",
+            "email": "cveldman@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Veldman\\Alert\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Veldman\\Alert\\AlertServiceProvider"
+            ]
+        }
+    }
+}
